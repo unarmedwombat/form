@@ -68,6 +68,7 @@ class Select extends FormControl
     protected function renderOption($value, $label)
     {
         $option = '<option ';
+        if ($value == '#') $value = '';
         $option .= 'value="' . $value . '"';
         $option .= $this->isSelected($value) ? ' selected' : '';
         $option .= '>';
